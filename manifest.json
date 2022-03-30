@@ -1,0 +1,23 @@
+{
+  "name": "CDA replacer",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "A Chromium extension to replace cda player with normal player.",
+  "icons": {
+    "128": "icons/cda_icon.png"
+  },
+  "permissions": [
+    "tabs",
+    "*://*.cda.pl//*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "replacer.js"
+      ]
+    }
+  ],
+}
